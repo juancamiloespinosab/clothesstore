@@ -1,1 +1,4 @@
-<a href="{{ url }}">{{ text }}</a>
+<ng-container [ngSwitch]="type">
+    <a *ngSwitchCase="'navigation'" routerLink="{{ url }}" routerLinkActive="bg-primary-color" [ngClass]="classList"> {{
+        text }} </a>
+</ng-container>
