@@ -1,0 +1,157 @@
+body, p, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #5B17AA;
+    --grey-color: #000000B8;
+    --grey-light-color: #F4F4F4;
+    --grey-ultralight-color: #E6E6E6;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+}
+
+/* ------------------------------------------------------- */
+
+/* sections */
+
+/* ------------------------------------------------------- */
+
+.block-component {
+    display: block;
+}
+
+.inline-component {
+    display: inline;
+}
+
+/* ------------------------------------------------------- */
+
+/* utils */
+
+/* ------------------------------------------------------- */
+
+/* display */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* background-color */
+
+.bg-primary-color {
+    background-color: var(--primary-color);
+}
+
+.bg-grey-color {
+    background-color: var(--grey-color);
+}
+
+.bg-grey-light-color {
+    background-color: var(--grey-light-color);
+}
+
+.bg-ultralight-color {
+    background-color: var(--grey-ultralight-color);
+}
+
+.bg-black-color {
+    background-color: var(--black-color);
+}
+
+.bg-white-color {
+    background-color: var(--white-color);
+}
+
+/* text-color */
+
+.text-primary-color {
+    -color: var(--primary-color);
+}
+
+.text-grey-color {
+    -color: var(--grey-color);
+}
+
+.text-grey-light-color {
+    -color: var(--grey-light-color);
+}
+
+.text-ultralight-color {
+    -color: var(--grey-ultralight-color);
+}
+
+.text-black-color {
+    -color: var(--black-color);
+}
+
+.text-white-color {
+    -color: var(--white-color);
+}
+
+/* fonts */
+
+.font-roboto-regular {
+    font-family: 'Roboto Regular';
+}
+
+.font-roboto-blackitalic {
+    font-family: 'Roboto Blackitalic';
+}
+
+.font-helvetica-bold {
+    font-family: 'Helvetica Bold';
+}
+
+.font-helvetica-medium {
+    font-family: 'Helvetica Medium';
+}
+
+.font-helvetica-light {
+    font-family: 'Helvetica Light';
+}
+
+.font-bebas {
+    font-family: 'Bebas';
+}
+
+/* font size */
+
+.font-size-small {
+    font-size: 12px;
+}
+
+.font-size-medium {
+    font-size: 16px;
+}
+
+.font-size-large {
+    font-size: 20px;
+}
+
+.font-size-extralarge {
+    font-size: 25px;
+}
+
+/* ------------------------------------------------------- */
+
+/* containers */
+
+/* ------------------------------------------------------- */

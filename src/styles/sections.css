@@ -1,0 +1,61 @@
+/* ------------------------------------------------------- */
+
+/* pages */
+
+/* ------------------------------------------------------- */
+
+/* .home {
+    position: relative;
+} */
+
+/* ------------------------------------------------------- */
+
+/* organisms */
+
+/* ------------------------------------------------------- */
+
+.organism {
+    width: 100%;
+}
+
+.header {
+    height: 25vh;
+    position: sticky;
+    top: 0;
+}
+
+/* home */
+
+.cover {
+    background-color: blue;
+}
+
+.banners {
+    background-color: green;
+}
+
+.top-products {
+    background-color: purple;
+}
+
+.footer {
+    background-color: black;
+}
+
+/* ------------------------------------------------------- */
+
+/* molecules */
+
+/* ------------------------------------------------------- */
+
+/* header */
+
+.main-header {
+    grid-template-columns: 20% 80%;
+    height: 60%;
+}
+
+.nav-header {
+    height: 40%;
+    width: 100%;
+}

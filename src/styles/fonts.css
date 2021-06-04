@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url(../assets/fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto Blackitalic';
+    src: url(../assets/fonts/roboto/Roboto-BlackItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Helvetica Bold';
+    src: url(../assets/fonts/helvetica/HelveticaNeueLTStdBd.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Medium';
+    src: url(../assets/fonts/helvetica/HelveticaNeueLTStdLt.otf);
+}
+
+@font-face {
+    font-family: 'Helvetica Light';
+    src: url(../assets/fonts/helvetica/HelveticaNeueLTStdTh.otf);
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url(../assets/fonts/bebas/Bebas-Regular.otf);
+}
