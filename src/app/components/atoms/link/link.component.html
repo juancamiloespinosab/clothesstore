@@ -1,4 +1,6 @@
 <ng-container [ngSwitch]="type">
-    <a *ngSwitchCase="'navigation'" routerLink="{{ url }}" routerLinkActive="bg-primary-color" [ngClass]="classList"> {{
+    <a *ngSwitchCase="'menu'" routerLink="{{ url }}" routerLinkActive="bg-primary-color" [ngClass]="classList"> {{
+        text }} </a>
+    <a *ngSwitchCase="'logo'" routerLink="{{ url }}" [ngClass]="classList"> {{
         text }} </a>
 </ng-container>

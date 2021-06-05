@@ -1,1 +1,13 @@
-<p>button works!</p>
+<ng-container [ngSwitch]="type">
+
+    <button *ngSwitchCase="'navigation'" (click)="executeAction()"
+        style.backgroundImage="url({{ ICONS_URL }}{{ icon }}.png)" [ngClass]="classList"
+        routerLink="{{ url }}"></button>
+
+    <button *ngSwitchCase="'default'" (click)="executeAction()" [ngClass]="classList">{{
+        text }}</button>
+
+    <button *ngSwitchCase="'action'" (click)="executeAction()"
+        style.backgroundImage="url({{ ICONS_URL }}{{ icon }}.png)" [ngClass]="classList"></button>
+
+</ng-container>

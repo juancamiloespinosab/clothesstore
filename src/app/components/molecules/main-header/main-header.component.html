@@ -1,17 +1,31 @@
-<div class="logo-container flex-center">
+<div class="main-header__logo flex">
 
-    <app-link class="inline-componenet atom logo"></app-link>
+    <app-link class="atom logo" [classList]="['text-black-color', 'font-size-main', 'font-bebas', 'logo-link']"
+        [type]="'logo'" [text]="'CLOTHESSTORE'" [url]="'/home'"></app-link>
 
 </div>
 
-<div class="options-container flex-center">
+<div class="main-header__options flex">
 
-    <app-search class="block-componenet molecule search"></app-search>
+    <div class="main-header__search-container flex">
 
-    <app-button class="inline-componenet atom cart"></app-button>
+        <app-search class="molecule search grid"></app-search>
 
-    <app-button class="inline-componenet atom user"></app-button>
+    </div>
 
-    <app-button class="inline-componenet atom log-in"></app-button>
+    <app-button class="atom button" [style.width]="'6vh'" [style.height]="'6vh'"
+        [classList]="['navigation-button', 'cart']" [type]="'navigation'" [icon]="'icon-cart'" [action]="'navigation'"
+        [url]="'#'">
+    </app-button>
+
+    <app-button class="atom button" [style.width]="'6vh'" [style.height]="'6vh'"
+        [classList]="['navigation-button', 'user']" [type]="'navigation'" [icon]="'icon-user'" [action]="'navigation'"
+        [url]="'#'">
+    </app-button>
+
+    <app-button class=" atom button" [style.width]="'16vh'" [style.height]="'4vh'"
+        [classList]="['default-button', 'log-in', 'font-size-medium', 'font-helvetica-medium']" [type]="'default'"
+        [action]="'navigation'" [url]="'#'" [text]="'Iniciar sesión'">
+    </app-button>
 
 </div>

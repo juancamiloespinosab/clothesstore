@@ -15,6 +15,8 @@ import { NavHeaderComponent } from './components/molecules/nav-header/nav-header
 import { SearchComponent } from './components/molecules/search/search.component';
 import { LinkComponent } from './components/atoms/link/link.component';
 import { ButtonComponent } from './components/atoms/button/button.component';
+import { InputComponent } from './components/atoms/input/input.component';
+import { ResultsBoxComponent } from './components/molecule/results-box/results-box.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ButtonComponent } from './components/atoms/button/button.component';
     NavHeaderComponent,
     SearchComponent,
     LinkComponent,
-    ButtonComponent
+    ButtonComponent,
+    InputComponent,
+    ResultsBoxComponent
   ],
   imports: [
     BrowserModule,

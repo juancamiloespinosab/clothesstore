@@ -1,1 +1,10 @@
-<p>search works!</p>
+<app-input class="atom input" [style.width]="'100%'" [style.height]="'100%'"
+    [classList]="['text-input', 'bg-grey-ultralight-color', 'font-helvetica-light', 'font-size-medium']" [type]="'text'"
+    [placeHolder]="'Buscar aquí producto'">
+</app-input>
+
+<app-button class="atom button" [style.width]="'80px'" [style.height]="'100%'"
+    [classList]="['action-button', 'bg-grey-light-color']" [type]="'action'" [icon]="'icon-search'">
+</app-button>
+
+<app-results-box class="molecule results-box"></app-results-box>

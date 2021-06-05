@@ -7,6 +7,16 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
+button, input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -14,10 +24,11 @@ a {
 :root {
     --primary-color: #5B17AA;
     --grey-color: #000000B8;
-    --grey-light-color: #F4F4F4;
-    --grey-ultralight-color: #E6E6E6;
+    --grey-light-color: #E6E6E6;
+    --grey-ultralight-color: #F4F4F4;
     --black-color: #000000;
     --white-color: #FFFFFF;
+    --products-in-cart: '3';
 }
 
 /* ------------------------------------------------------- */
@@ -42,16 +53,18 @@ a {
 
 /* display */
 
-.flex-center {
+.flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.grid-center {
+.grid {
     display: grid;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
 }
 
 /* background-color */
@@ -68,7 +81,7 @@ a {
     background-color: var(--grey-light-color);
 }
 
-.bg-ultralight-color {
+.bg-grey-ultralight-color {
     background-color: var(--grey-ultralight-color);
 }
 
@@ -83,27 +96,27 @@ a {
 /* text-color */
 
 .text-primary-color {
-    -color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .text-grey-color {
-    -color: var(--grey-color);
+    color: var(--grey-color);
 }
 
 .text-grey-light-color {
-    -color: var(--grey-light-color);
+    color: var(--grey-light-color);
 }
 
-.text-ultralight-color {
-    -color: var(--grey-ultralight-color);
+.text-grey-ultralight-color {
+    color: var(--grey-ultralight-color);
 }
 
 .text-black-color {
-    -color: var(--black-color);
+    color: var(--black-color);
 }
 
 .text-white-color {
-    -color: var(--white-color);
+    color: var(--white-color);
 }
 
 /* fonts */
@@ -135,19 +148,23 @@ a {
 /* font size */
 
 .font-size-small {
-    font-size: 12px;
+    font-size: 1vh;
 }
 
 .font-size-medium {
-    font-size: 16px;
+    font-size: 2vh;
 }
 
 .font-size-large {
-    font-size: 20px;
+    font-size: 3vh;
 }
 
 .font-size-extralarge {
-    font-size: 25px;
+    font-size: 6vh;
+}
+
+.font-size-main {
+    font-size: 8vh;
 }
 
 /* ------------------------------------------------------- */
