@@ -1,0 +1,8 @@
+<ng-container [ngSwitch]="type">
+    <h2 *ngSwitchCase="'h2'" style.shadow [ngClass]="classList"> {{
+        text }} </h2>
+    <h3 *ngSwitchCase="'h3'" [ngClass]="classList"> {{
+        text }} </h3>
+    <p *ngSwitchCase="'paragraph'" [ngClass]="classList"> {{
+        text }} </p>
+</ng-container>

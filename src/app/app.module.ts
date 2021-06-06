@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +18,9 @@ import { SearchComponent } from './components/molecules/search/search.component'
 import { LinkComponent } from './components/atoms/link/link.component';
 import { ButtonComponent } from './components/atoms/button/button.component';
 import { InputComponent } from './components/atoms/input/input.component';
-import { ResultsBoxComponent } from './components/molecule/results-box/results-box.component';
+import { ResultsBoxComponent } from './components/molecules/results-box/results-box.component';
+import { TextComponent } from './components/atoms/text/text.component';
+import { ProductsGridComponent } from './components/molecules/products-grid/products-grid.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +38,15 @@ import { ResultsBoxComponent } from './components/molecule/results-box/results-b
     LinkComponent,
     ButtonComponent,
     InputComponent,
-    ResultsBoxComponent
+    ResultsBoxComponent,
+    TextComponent,
+    ProductsGridComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

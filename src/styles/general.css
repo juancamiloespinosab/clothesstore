@@ -1,6 +1,11 @@
-body, p, h1, ul {
+body, p, h1, h2, h3, ul, img {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3 {
+    font-size: 100%;
+    font-weight: normal;
 }
 
 a {
@@ -25,6 +30,7 @@ button, input {
     --primary-color: #5B17AA;
     --grey-color: #000000B8;
     --grey-light-color: #E6E6E6;
+    --grey-light-color-alpha: #6060602c;
     --grey-ultralight-color: #F4F4F4;
     --black-color: #000000;
     --white-color: #FFFFFF;
@@ -81,6 +87,10 @@ button, input {
     background-color: var(--grey-light-color);
 }
 
+.bg-grey-light-color-alpha {
+    background-color: var(--grey-light-color-alpha);
+}
+
 .bg-grey-ultralight-color {
     background-color: var(--grey-ultralight-color);
 }
@@ -117,6 +127,22 @@ button, input {
 
 .text-white-color {
     color: var(--white-color);
+}
+
+.text-shadow {
+    text-shadow: 2px 5px 10px var(--grey-color);
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
 }
 
 /* fonts */
@@ -159,8 +185,12 @@ button, input {
     font-size: 3vh;
 }
 
+.font-size-superlarge {
+    font-size: 5vh;
+}
+
 .font-size-extralarge {
-    font-size: 6vh;
+    font-size: 7vh;
 }
 
 .font-size-main {

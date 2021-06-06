@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/interfaces/Product';
+import { ActionsService } from 'src/app/services/actions/actions.service';
+import { ApiService } from 'src/app/services/api/api.service';
+import { DataService } from 'src/app/services/data/data.service';
+import { ProductsGridService } from 'src/app/services/products-grid/products-grid.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private dataService: DataService,
+    private apiService: ApiService,
+    private actionsService: ActionsService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  ngOnDestroy() {
+    console.log('des');
+    
+  }
 }

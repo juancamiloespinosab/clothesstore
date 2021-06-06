@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import * as EventEmitter from 'events';
+import { Action } from 'src/app/interfaces/Action';
+import { ActionsService } from 'src/app/services/actions/actions.service';
+import { DataService } from 'src/app/services/data/data.service';
 import { NavigationService } from 'src/app/services/navigation/navigation.service';
 
 @Component({
@@ -15,12 +18,12 @@ export class ButtonComponent implements OnInit {
   @Input() type: string;
   @Input() icon: string;
   @Input() text: string;
-  @Input() action: string;
+  @Input() action: Action;
   @Input() url: string;
 
   ICONS_URL: string = '/assets/icons/';
 
-  constructor(private navigationService: NavigationService) {
+  constructor(private navigationService: NavigationService, private actionsService: ActionsService) {
 
   }
 
@@ -28,12 +31,9 @@ export class ButtonComponent implements OnInit {
 
   }
 
-  executeAction() {
-    switch (this.action) {
-      case 'navigation':
-        this.navigationService.navigateTo(this.url);
-        break;
-    }
+  emitAction() {
+    this.actionsService.actions$.emit(this.action)
+
   }
 
 }
