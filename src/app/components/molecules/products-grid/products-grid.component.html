@@ -1,0 +1,7 @@
+<div #grid class="products-grid grid">
+    <!-- <ng-container *ngIf="dataService.topProductsList$ | async as productsArray"> -->
+    <div *ngFor="let item of productsArrayToRender" class="card font-size-superlarge">{{ item.id }}</div>
+    <!-- </ng-container> -->
+
+
+</div>

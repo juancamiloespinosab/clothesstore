@@ -1,4 +1,4 @@
-<app-header class="organism header grid"></app-header>
+<!-- <app-header class="organism header grid"></app-header> -->
 <!-- 
 <app-cover class="block-component organism cover flex-center"></app-cover>
 
@@ -9,13 +9,65 @@
 <app-footer class="block-component organism footer flex-center"></app-footer> -->
 
 
-<div class="organism cover">
-    <app-button></app-button>
+<div class="organism cover flex">
+
+    <div class="molecule cover-nav-arrows flex">
+        <app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
+            [classList]="['action-button', 'user', 'bg-grey-light-color-alpha' , 'arrow']" [type]="'navigation'"
+            [icon]="'icon-genet-l'" [action]="'action'" [url]="'#'">
+        </app-button>
+        <app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
+            [classList]="['action-button', 'user', 'bg-grey-light-color-alpha', 'arrow']" [type]="'navigation'"
+            [icon]="'icon-genet-r'" [action]="'action'" [url]="'#'">
+        </app-button>
+    </div>
+
+    <div class="atom cover-image" style="width: 100%">
+        <div style="width: 100%; height: 100%; background-size: cover; background-color: green; background-image:
+            url(/assets/images/banner-principal-desktop.png)" class="">
+        </div>
+    </div>
 
 </div>
 
-<div class="banners"></div>
+<div class="organism banners bg-white-color flex">
 
-<div class="top-products"></div>
+    <div class="banners__container grid" style="width: 90%;">
+
+        <div class="molecule flex" style="width: 100%; position: relative;">
+
+            <app-text class="atom banner-text" [type]="'h2'"
+                [classList]="[ 'text-white-color', 'font-roboto-blackitalic', 'font-size-extralarge', 'text-shadow' ]"
+                [text]="'MODA INFANTIL'">
+            </app-text>
+
+            <div class="atom image" style="width: 100%">
+                <img style="width: 100%;" class="" [src]="'/assets/images/categorias-destacadas-moda-infantil.png'">
+
+            </div>
+
+        </div>
+
+        <div class="molecule flex" style="width: 100%; position: relative;">
+
+            <app-text class="atom banner-text" [type]="'h2'"
+                [classList]="[ 'text-white-color', 'font-roboto-blackitalic', 'font-size-extralarge', 'text-shadow' ]"
+                [text]="'PROTECCIÓN'">
+            </app-text>
+
+            <div class="atom image" style="width: 100%">
+
+                <img style="width: 100%;" class="" [src]="'/assets/images/categorias-destacadas-proteccion.png'">
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+<app-top-products class="organism top-products flex"></app-top-products>
 
 <div class="footer"></div>

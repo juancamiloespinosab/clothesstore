@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-top-products',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopProductsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+
+
+    // setTimeout(() => {
+    //   this.productsGridService.initGrid(7, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]);
+    // }, 0);
+
+
   }
+
+
+
 
 }

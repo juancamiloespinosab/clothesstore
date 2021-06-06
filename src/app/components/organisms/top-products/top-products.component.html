@@ -1,1 +1,22 @@
-<p>top-products works!</p>
+<app-text class="atom" [type]="'h2'"
+    [classList]="[ 'text-black-color', 'font-helvetica-bold', 'font-size-superlarge', 'text-align-center ' ]"
+    [text]="'PRODUCTOS MÁS BUSCADOS'">
+</app-text>
+
+<div class="top-products__grid flex">
+
+    <div class="molecule cover-nav-arrows flex">
+        <app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
+            [classList]="['action-button', 'user', 'arrow']" [type]="'action'" [icon]="'icon-genet-dark-l'"
+            [action]="{name: 'prev-top-produts'}">
+        </app-button>
+        <app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
+            [classList]="['action-button', 'user', 'arrow']" [type]="'action'" [icon]="'icon-genet-dark-r'"
+            [action]="{name: 'next-top-produts'}">
+        </app-button>
+    </div>
+
+    <app-products-grid id="tests" [name]="'top-products-grid'" class="molecule flex">
+    </app-products-grid>
+
+</div>
