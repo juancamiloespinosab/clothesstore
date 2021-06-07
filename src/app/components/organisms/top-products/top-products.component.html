@@ -5,18 +5,10 @@
 
 <div class="top-products__grid flex">
 
-    <div class="molecule cover-nav-arrows flex">
-        <app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
-            [classList]="['action-button', 'user', 'arrow']" [type]="'action'" [icon]="'icon-genet-dark-l'"
-            [action]="{name: 'prev-top-produts'}">
-        </app-button>
-        <app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
-            [classList]="['action-button', 'user', 'arrow']" [type]="'action'" [icon]="'icon-genet-dark-r'"
-            [action]="{name: 'next-top-produts'}">
-        </app-button>
-    </div>
+    <app-nav-arrows class="molecule cover-nav-arrows flex" [type]="'dark'" [actionName]="'nav-top-products-grid'">
+    </app-nav-arrows>
 
-    <app-products-grid id="tests" [name]="'top-products-grid'" class="molecule flex">
+    <app-products-grid [name]="'top-products-grid'" class="molecule products-grid flex">
     </app-products-grid>
 
 </div>

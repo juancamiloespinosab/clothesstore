@@ -1,0 +1,8 @@
+<app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
+    [classList]="['action-button', 'user', 'arrow', type + '-arrow' ]" [type]="'action'"
+    [icon]="'icon-genet-' + type + '-l'" [action]="{name: 'prev-' + actionName}">
+</app-button>
+<app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
+    [classList]="['action-button', 'user', 'arrow', type + '-arrow']" [type]="'action'"
+    [icon]="'icon-genet-' + type + '-r'" [action]="{name: 'next-' + actionName}">
+</app-button>

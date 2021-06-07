@@ -1,6 +1,7 @@
 <ng-container [ngSwitch]="type">
-
-    <input *ngSwitchCase="'text'" [ngClass]="classList" type="{{ type }}" placeholder="{{ placeHolder }}">
+    <!-- {{ waiting }} -->
+    <input (input)="emitAction($event)" *ngSwitchCase="'text'" [ngClass]="classList" type="{{ type }}"
+        placeholder="{{ placeHolder }}">
 
 
 </ng-container>

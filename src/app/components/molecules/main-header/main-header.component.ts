@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ProductsGridService } from 'src/app/services/products-grid/products-grid.service';
 
 @Component({
   selector: 'app-main-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainHeaderComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('options') options;
+
+  constructor(private productsGridService: ProductsGridService) { }
 
   ngOnInit(): void {
+
+  }
+
+  ngAfterViewInit() {
+   
+    this.productsGridService.mainHeaderComponenet = this;
   }
 
 }

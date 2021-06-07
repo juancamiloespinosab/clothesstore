@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation/navigation.service';
 
 @Component({
   selector: 'app-nav-header',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavHeaderComponent implements OnInit {
 
+  
   constructor() { }
-
+  
   ngOnInit(): void {
+  }
+  
+  ngAfterViewInit() {
+
   }
 
 }

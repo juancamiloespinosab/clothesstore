@@ -1,4 +1,4 @@
-button {
+button, div {
     width: 100%;
     height: 100%;
     cursor: pointer;
@@ -14,6 +14,13 @@ button {
     border: 2px solid var(--black-color);
 }
 
+.icon-button {
+    width: 100%;
+    height: 100%;
+    /* padding: 1vh; */
+    text-align: center;
+}
+
 .cart {
     position: relative;
 }
@@ -21,8 +28,8 @@ button {
 .cart::after {
     content: var(--products-in-cart);
     position: absolute;
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
     color: var(--white-color);
     background-color: var(--primary-color);
     top: 0;
@@ -32,9 +39,27 @@ button {
     justify-content: center;
     align-items: center;
     font-family: 'Helvetica Medium';
+    font-size: 100%;
 }
 
 .arrow {
     background-size: 50%;
+}
 
+.normal-arrow {
+    background-color: var(--grey-light-color-alpha);
+}
+
+.icon {
+    width: 10%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    button {
+        background-size: 70% !important;
+    }
 }

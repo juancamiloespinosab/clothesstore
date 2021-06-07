@@ -11,22 +11,12 @@
 
 <div class="organism cover flex">
 
-    <div class="molecule cover-nav-arrows flex">
-        <app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
-            [classList]="['action-button', 'user', 'bg-grey-light-color-alpha' , 'arrow']" [type]="'navigation'"
-            [icon]="'icon-genet-l'" [action]="'action'" [url]="'#'">
-        </app-button>
-        <app-button class="atom button" [style.width]="'6vh'" [style.height]="'10vh'"
-            [classList]="['action-button', 'user', 'bg-grey-light-color-alpha', 'arrow']" [type]="'navigation'"
-            [icon]="'icon-genet-r'" [action]="'action'" [url]="'#'">
-        </app-button>
-    </div>
+    <app-nav-arrows class="molecule cover-nav-arrows flex" [type]="'normal'" [actionName]="'nav-cover'">
+    </app-nav-arrows>
 
-    <div class="atom cover-image" style="width: 100%">
-        <div style="width: 100%; height: 100%; background-size: cover; background-color: green; background-image:
-            url(/assets/images/banner-principal-desktop.png)" class="">
-        </div>
-    </div>
+    <app-image class="atom cover-image" [classList]="[ 'cover' ]" [type]="'adaptive'"
+        [src]="'/assets/images/banner-principal-desktop.png'">
+    </app-image>
 
 </div>
 
@@ -41,10 +31,9 @@
                 [text]="'MODA INFANTIL'">
             </app-text>
 
-            <div class="atom image" style="width: 100%">
-                <img style="width: 100%;" class="" [src]="'/assets/images/categorias-destacadas-moda-infantil.png'">
-
-            </div>
+            <app-image class="atom image" [type]="'default'"
+                [src]="'/assets/images/categorias-destacadas-moda-infantil.png'">
+            </app-image>
 
         </div>
 
@@ -55,11 +44,9 @@
                 [text]="'PROTECCIÓN'">
             </app-text>
 
-            <div class="atom image" style="width: 100%">
-
-                <img style="width: 100%;" class="" [src]="'/assets/images/categorias-destacadas-proteccion.png'">
-
-            </div>
+            <app-image class="atom image" [type]="'default'"
+                [src]="'/assets/images/categorias-destacadas-proteccion.png'">
+            </app-image>
 
         </div>
     </div>

@@ -33,8 +33,9 @@ button, input {
     --grey-light-color-alpha: #6060602c;
     --grey-ultralight-color: #F4F4F4;
     --black-color: #000000;
+    --black-light-color: #797979;
     --white-color: #FFFFFF;
-    --products-in-cart: '3';
+    --products-in-cart: '0';
 }
 
 /* ------------------------------------------------------- */
@@ -124,6 +125,9 @@ button, input {
 .text-black-color {
     color: var(--black-color);
 }
+.text-black-light-color {
+    color: var(--black-light-color);
+}
 
 .text-white-color {
     color: var(--white-color);
@@ -179,6 +183,10 @@ button, input {
 
 .font-size-medium {
     font-size: 2vh;
+}
+
+.font-size-medium-plus {
+    font-size: 2.5vh;
 }
 
 .font-size-large {

@@ -14,14 +14,16 @@ export class ProductsGridComponent implements OnInit {
   @ViewChild('grid') grid: ElementRef;
   @Input() name: string;
 
-  productsList: Product[];
+  productsList: Product[] = [];
   productsArrayToRender: Product[];
-  columnsLimitToRender: number = 0;
-  rowsLimitToRender: number = 0;
+  columnsRowsLimitToRender: number = 0;
   offset: number = 0;
 
+  resultsFound: boolean = true;
+
   constructor(
-    private productsGridService: ProductsGridService
+    private productsGridService: ProductsGridService,
+    public dataService: DataService
   ) { }
 
   ngOnInit() {
@@ -29,10 +31,37 @@ export class ProductsGridComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.productsGridService.productsGridComponentsList.push(this);
-    this.productsGridService.initGrid(this.name);
+
+    setTimeout(() => {
+      const findGridId = this.productsGridService.productsGridComponentsList.findIndex(grid => grid.name == this.name);
+
+      if (findGridId >= 0) {
+        this.productsGridService.productsGridComponentsList[findGridId] = this
+      } else {
+        this.productsGridService.productsGridComponentsList.push(this);
+
+      }
+
+      this.productsGridService.initGrid(this.name);
+    }, 0);
+
+
   }
 
+  async onScroll() {
 
+    if (this.productsArrayToRender && this.name == 'results-search') {
+
+      const productList: Product[] = await this.dataService.getProductsList();
+
+      if (productList.length > 0) {
+        productList.forEach(element => {
+          this.productsArrayToRender.push(element);
+
+        });
+      }
+    }
+
+  }
 
 }

@@ -1,0 +1,6 @@
+<ng-container [ngSwitch]="type">
+    <img *ngSwitchCase="'default'" [src]="src" [class]="type">
+    <div *ngSwitchCase="'adaptive'" [class]="type" [style]="'background-image: url(' + src + ');'"></div>
+
+
+</ng-container>

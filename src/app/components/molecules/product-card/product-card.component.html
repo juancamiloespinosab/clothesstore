@@ -1,0 +1,38 @@
+<ng-container *ngIf="product">
+
+    <div class="product-card__image-container">
+
+        <app-text [type]="'h2'" class="card-discount" *ngIf="product.discount > 0" [text]="'-' + product.discount + '%'"
+            [classList]="[ 'bg-primary-color', 'text-white-color', 'font-helvetica-bold', 'font-size-medium', 'discount-card-text' ]">
+        </app-text>
+        <app-image class="atom image" [type]="'adaptive'" [src]="product.thumbnail"></app-image>
+    </div>
+    <div class="product-card__info-container bg-grey-light-color grid">
+
+        <app-text [type]="'paragraph'" class="" [text]="product.title" 
+            [classList]="[ 'text-black-color', 'font-helvetica-light', 'font-size-medium', 'title-card-text' , 'text-align-left' ]">
+        </app-text>
+
+        <div class="product-card__prices-container flex">
+            <app-text [type]="'h2'" class="" [text]="product.price | currency:'$':'symbol':'1.0'"
+                [classList]="[ 'text-primary-color', 'font-helvetica-bold', 'font-size-medium-plus']">
+            </app-text>
+
+            <app-text *ngIf="product.discount > 0" [type]="'h2'" class=""
+                [text]="product.original_price | currency:'$':'symbol':'1.0'"
+                [classList]="[ 'text-black-light-color', 'font-helvetica-light', 'font-size-medium-plus' , 'line-through-text']">
+            </app-text>
+
+
+        </div>
+
+        <app-button class="atom button" [style.width]="'100%'" [style.height]="'100%'"
+            [classList]="['icon-button', 'font-size-medium', 'font-roboto-regular', 'text-white-color', 'bg-black-color']"
+            [type]="'icon-default'" [action]="{ name: 'add-product-to-cart', value: product }" [text]="'Agregar al carrito'"
+            [icon]="'icon-cart-white'">
+        </app-button>
+
+
+    </div>
+
+</ng-container>

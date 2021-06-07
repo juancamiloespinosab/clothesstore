@@ -1,7 +1,23 @@
-<div #grid class="products-grid grid">
-    <!-- <ng-container *ngIf="dataService.topProductsList$ | async as productsArray"> -->
-    <div *ngFor="let item of productsArrayToRender" class="card font-size-superlarge">{{ item.id }}</div>
-    <!-- </ng-container> -->
+<!-- {{ offset }} -->
+<ng-container *ngIf="dataService.searching">
+    <app-image class="atom loading-image" [type]="'default'" [src]="'/assets/icons/loading.png'">
+    </app-image>
+</ng-container>
+
+<div #grid class="products-grid__container grid"
+    [ngClass]=" { 'products-grid__container--results-box': name == 'results-box-grid' } " infiniteScroll
+    [infiniteScrollDistance]="0.01" (scrolled)="onScroll()">
+
+    <ng-container *ngIf="resultsFound else noResultsMessage">
+        <app-product-card *ngFor="let product of productsArrayToRender" class="molecule product-card grid"
+            [product]="product"></app-product-card>
+    </ng-container>
+
+    <ng-template #noResultsMessage>
+        <app-text [type]="'paragraph'" [text]="'No encontramos ningún producto'"
+            [classList]="[ 'text-grey-color', 'font-roboto-regular', 'font-size-medium-plus' ]"></app-text>
+    </ng-template>
+
 
 
 </div>

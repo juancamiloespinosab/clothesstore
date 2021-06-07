@@ -15,10 +15,10 @@ export class ApiService {
     return Math.round(100 - ((price * 100) / originalPrice));
   }
 
-  async getProducts(): Promise<Product[]> {
+  async getProducts(query: string, limit: number, offset: number): Promise<Product[]> {
     let productList: Product[];
 
-    const url = 'https://api.mercadolibre.com/sites/MCO/search?category=MCO1430&q=camisas&limit=12';
+    const url = `https://api.mercadolibre.com/sites/MCO/search?category=MCO1430&q=${query}&limit=${limit}&offset=${offset}`;
     await this.http.get<any>(url)
       .pipe(
         map(
@@ -38,8 +38,9 @@ export class ApiService {
         )
       ).toPromise()
       .then(response => {
-        
+
         productList = response;
+
       })
 
     return productList;

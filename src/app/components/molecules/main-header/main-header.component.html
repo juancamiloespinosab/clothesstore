@@ -1,11 +1,12 @@
-<div class="main-header__logo flex">
+<div #options class="main-header__container grid">
+
+    <app-button class="atom button menu-button" [style.width]="'6vh'" [style.height]="'6vh'"
+        [classList]="['navigation-button']" [type]="'action'" [icon]="'icon-menu'" [action]="{ name: 'open-menu' }">
+    </app-button>
 
     <app-link class="atom logo" [classList]="['text-black-color', 'font-size-main', 'font-bebas', 'logo-link']"
         [type]="'logo'" [text]="'CLOTHESSTORE'" [url]="'/home'"></app-link>
 
-</div>
-
-<div class="main-header__options flex">
 
     <div class="main-header__search-container flex">
 
@@ -13,19 +14,17 @@
 
     </div>
 
-    <app-button class="atom button" [style.width]="'6vh'" [style.height]="'6vh'"
-        [classList]="['navigation-button', 'cart']" [type]="'navigation'" [icon]="'icon-cart'" [action]="'navigation'"
-        [url]="'#'">
+    <app-button class="atom button cart-button" [style.width]="'6vh'" [style.height]="'6vh'"
+        [classList]="['navigation-button', 'cart']" [type]="'navigation'" [icon]="'icon-cart'" [url]="'/cart'">
     </app-button>
 
-    <app-button class="atom button" [style.width]="'6vh'" [style.height]="'6vh'"
-        [classList]="['navigation-button', 'user']" [type]="'navigation'" [icon]="'icon-user'" [action]="'navigation'"
-        [url]="'#'">
+    <app-button class="atom button user-button" [style.width]="'6vh'" [style.height]="'6vh'"
+        [classList]="['navigation-button', 'user']" [type]="'navigation'" [icon]="'icon-user'" [url]="'#'">
     </app-button>
 
-    <app-button class=" atom button" [style.width]="'16vh'" [style.height]="'4vh'"
+    <app-button class=" atom button log-in-button" [style.width]="'100%'" [style.height]="'60%'"
         [classList]="['default-button', 'log-in', 'font-size-medium', 'font-helvetica-medium']" [type]="'default'"
-        [action]="'navigation'" [url]="'#'" [text]="'Iniciar sesión'">
+        [url]="'#'" [text]="'Iniciar sesión'">
     </app-button>
 
 </div>

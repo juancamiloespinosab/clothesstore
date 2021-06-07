@@ -1,4 +1,8 @@
-<ul class="nav-header__list flex">
+<ul #nav class="nav-header__list flex">
+
+    <app-button class="atom button close-menu-button" [style.width]="'6vh'" [style.height]="'6vh'"
+        [classList]="['navigation-button']" [type]="'action'" [icon]="'icon-close'" [action]="{ name: 'close-menu' }">
+    </app-button>
 
     <li>
         <app-link class="atom link" [style.width]="'100%'" [style.height]="'100%'"
@@ -38,7 +42,7 @@
     <li>
         <app-link class="atom link" [style.width]="'100%'" [style.height]="'100%'"
             [classList]="['text-white-color', 'font-size-large', 'font-helvetica-bold']" [type]="'menu'"
-            [text]="'Ofertas'" [url]="'/search-results'">
+            [text]="'Ofertas'" [url]="'#'">
         </app-link>
     </li>
 

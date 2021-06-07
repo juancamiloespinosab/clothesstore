@@ -1,18 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Atom } from 'src/app/models/Atom';
 
 @Component({
   selector: 'app-text',
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.css']
 })
-export class TextComponent implements OnInit {
+export class TextComponent extends Atom implements OnInit {
 
-  @Input() type: string;
   @Input() text: string;
-  @Input() classList: string[];
 
 
-  constructor() { }
+  constructor() {
+    super();
+   }
 
   ngOnInit(): void {
   }

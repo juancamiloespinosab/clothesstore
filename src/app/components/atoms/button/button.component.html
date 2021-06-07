@@ -1,13 +1,19 @@
+
+
 <ng-container [ngSwitch]="type">
 
-    <button *ngSwitchCase="'navigation'"
-        style.backgroundImage="url({{ ICONS_URL }}{{ icon }}.png)" [ngClass]="classList"
-        routerLink="{{ url }}"></button>
+    <button *ngSwitchCase="'navigation'" style.backgroundImage="url({{ ICONS_URL }}{{ icon }}.png)"
+        [ngClass]="classList" routerLink="{{ url }}"></button>
+
+
+    <button *ngSwitchCase="'action'" (click)="emitAction()" style.backgroundImage="url({{ ICONS_URL }}{{ icon }}.png)"
+        [ngClass]="classList"></button>
 
     <button *ngSwitchCase="'default'" (click)="emitAction()" [ngClass]="classList">{{
         text }}</button>
 
-    <button *ngSwitchCase="'action'" (click)="emitAction()" style.backgroundImage="url({{ ICONS_URL }}{{ icon }}.png)"
-        [ngClass]="classList"></button>
+    <div *ngSwitchCase="'icon-default'" (click)="emitAction()" class="flex" [ngClass]="classList">
+        <span class="icon" style.backgroundImage="url({{ ICONS_URL }}{{ icon }}.png)"></span>{{ text }}
+    </div>
 
 </ng-container>

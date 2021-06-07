@@ -1,10 +1,11 @@
 <app-input class="atom input" [style.width]="'100%'" [style.height]="'100%'"
     [classList]="['text-input', 'bg-grey-ultralight-color', 'font-helvetica-light', 'font-size-medium']" [type]="'text'"
-    [placeHolder]="'Buscar aquí producto'">
+    [placeHolder]="'Buscar aquí producto'" [actionName]="'pre-search-products'">
 </app-input>
 
 <app-button class="atom button" [style.width]="'100%'" [style.height]="'100%'"
-    [classList]="['action-button', 'bg-grey-light-color']" [type]="'action'" [icon]="'icon-search'">
+    [classList]="['action-button', 'bg-grey-light-color']" [type]="'action'" [icon]="'icon-search'"
+    [action]="{ name: 'search-products' }">
 </app-button>
 
-<app-results-box class="molecule results-box"></app-results-box>
+<app-results-box class="molecule results-box flex bg-white-color"></app-results-box>

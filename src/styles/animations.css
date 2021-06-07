@@ -1,0 +1,26 @@
+@keyframes fade-in {
+    from {
+        filter: opacity(0);
+    }
+    to {
+        filter: opacity(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes open {
+    from {
+        transform: translateX(-100%)
+    }
+    to {
+        transform: translateX(0%)
+    }
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data/data.service';
+import { NavigationService } from 'src/app/services/navigation/navigation.service';
 
 @Component({
   selector: 'app-search-results',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchResultsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService, private navigationService: NavigationService) { }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy() {
+    this.dataService.resetProductsListOffset();
+    this.navigationService.smoothScrollToTop();
   }
 
 }

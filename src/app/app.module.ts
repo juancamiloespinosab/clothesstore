@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HttpClientModule } from "@angular/common/http";
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,10 @@ import { InputComponent } from './components/atoms/input/input.component';
 import { ResultsBoxComponent } from './components/molecules/results-box/results-box.component';
 import { TextComponent } from './components/atoms/text/text.component';
 import { ProductsGridComponent } from './components/molecules/products-grid/products-grid.component';
+import { ProductCardComponent } from './components/molecules/product-card/product-card.component';
+import { ImageComponent } from './components/atoms/image/image.component';
+import { NavArrowsComponent } from './components/molecules/nav-arrows/nav-arrows.component';
+import { CartComponent } from './components/pages/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +45,18 @@ import { ProductsGridComponent } from './components/molecules/products-grid/prod
     InputComponent,
     ResultsBoxComponent,
     TextComponent,
-    ProductsGridComponent
+    ProductsGridComponent,
+    ProductCardComponent,
+    ImageComponent,
+    NavArrowsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

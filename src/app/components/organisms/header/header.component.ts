@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation/navigation.service';
+import { NavHeaderComponent } from '../../molecules/nav-header/nav-header.component';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +13,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

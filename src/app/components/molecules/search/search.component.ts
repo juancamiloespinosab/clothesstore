@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { DataService } from 'src/app/services/data/data.service';
+import { InputComponent } from '../../atoms/input/input.component';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(InputComponent) inputCompoenent: InputComponent;
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+
   }
+
 
 }
